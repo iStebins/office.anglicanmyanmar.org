@@ -22,13 +22,13 @@ Route::get('/', function () {
     return redirect('dashboard');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
-Route::resource('/news', NewsController::class);
+Route::resource('/news', NewsController::class)->middleware('auth');
 
-Route::resource('/magazines', MagazineController::class);
+Route::resource('/magazines', MagazineController::class)->middleware('auth');
 
-Route::resource('/parishes', ParishController::class);
+Route::resource('/parishes', ParishController::class)->middleware('auth');
 
 Auth::routes();
 
