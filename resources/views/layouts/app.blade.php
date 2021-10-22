@@ -73,7 +73,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="{{ route('dashboard') }}">
+        <a class="nav-link  {{ Request::segment(1) == 'dashboard' ? '' : 'collapsed' }}" href="{{ route('dashboard') }}">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -81,10 +81,10 @@
 
       <!-- End News Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#news-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link {{ Request::segment(1) == 'news' ? '' : 'collapsed' }}" data-bs-target="#news-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-newspaper"></i><span>News</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="news-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+        <ul id="news-nav" class="nav-content collapse {{ Request::segment(1) == 'news' ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
           <li>
             <a href="{{ route('news.index') }}">
               <i class="bi bi-circle"></i><span>All News</span>
@@ -101,10 +101,10 @@
 
       <!-- End Parishes Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#parishes-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link {{ Request::segment(1) == 'parishes' ? '' : 'collapsed' }}" data-bs-target="#parishes-nav" data-bs-toggle="collapse" href="#">
           <i class="bx bxs-church"></i><span>Parishes</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="parishes-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="parishes-nav" class="nav-content collapse {{ Request::segment(1) == 'parishes' ? 'show' : '' }} " data-bs-parent="#sidebar-nav">
           <li>
             <a href="{{ route('parishes.index') }}">
               <i class="bi bi-circle"></i><span>All Parishes</span>
@@ -121,10 +121,10 @@
 
       <!-- End Magazines Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#magazines-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link {{ Request::segment(1) == 'magazines' ? '' : 'collapsed' }}" data-bs-target="#magazines-nav" data-bs-toggle="collapse" href="#">
           <i class="bx bxs-pen"></i><span>Magazines</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="magazines-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="magazines-nav" class="nav-content collapse {{ Request::segment(1) == 'magazines' ? 'show' : '' }} " data-bs-parent="#sidebar-nav">
           <li>
             <a href="{{ route('magazines.index') }}">
               <i class="bi bi-circle"></i><span>All Magazines</span>
@@ -141,10 +141,10 @@
 
       <!-- End Employees Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#employees-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link {{ Request::segment(1) == 'employees' ? '' : 'collapsed' }}" data-bs-target="#employees-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-people-fill"></i><span>Employees</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="employees-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="employees-nav" class="nav-content collapse {{ Request::segment(1) == 'employees' ? 'show' : '' }} " data-bs-parent="#sidebar-nav">
           <li>
             <a href="{{ route('news.index') }}">
               <i class="bi bi-circle"></i><span>All Employees</span>
