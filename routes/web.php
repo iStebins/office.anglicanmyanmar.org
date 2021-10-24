@@ -25,6 +25,10 @@ Route::get('/', function () {
     return redirect('dashboard');
 });
 
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::resource('/news', NewsController::class);
