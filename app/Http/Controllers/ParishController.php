@@ -19,7 +19,7 @@ class ParishController extends Controller
     public function index()
     {
         $parishes = Parish::latest()->get();
-        return view('parishes.index',compact('parishes'));
+        return view('parishes.index', compact('parishes'));
     }
 
     /**
@@ -30,7 +30,7 @@ class ParishController extends Controller
     public function create()
     {
         $dioceses = Diocese::all();
-        return view('parishes.create',compact('dioceses'));
+        return view('parishes.create', compact('dioceses'));
     }
 
     /**
@@ -74,7 +74,7 @@ class ParishController extends Controller
     public function show(Parish $parish)
     {
         $church = Parish::find($parish->id);
-        return view('parishes.show',compact('church'));
+        return view('parishes.show', compact('church'));
     }
 
     /**

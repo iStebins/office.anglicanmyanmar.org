@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
 use App\Models\Ethnicity;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class EthnicityController extends Controller
      */
     public function index()
     {
-        //
+        $ethnicities = Ethnicity::all();
+        // $employees = Employee::where('ethnicity_id', 3);
+        return view('ethnicities.index',compact('ethnicities'));
     }
 
     /**

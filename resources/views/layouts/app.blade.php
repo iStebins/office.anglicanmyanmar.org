@@ -146,15 +146,15 @@
         </a>
         <ul id="employees-nav" class="nav-content collapse {{ Request::segment(1) == 'employees' ? 'show' : '' }} " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="{{ route('news.index') }}">
+            <a href="{{ route('employees.index') }}">
               <i class="bi bi-circle"></i><span>All Employees</span>
             </a>
           </li>
           <li>
-            <a href="{{ route('news.create') }}">
+            <a href="{{ route('employees.create') }}">
               <i class="bi bi-circle"></i><span>Add Clergy</span>
             </a>
-            <a href="{{ route('news.create') }}">
+            <a href="{{ route('employees.create') }}">
               <i class="bi bi-circle"></i><span>Add Staff</span>
             </a>
           </li>
@@ -162,31 +162,40 @@
       </li>
       <!-- End Employees Nav -->
 
+      <!-- End Dioceses Nav -->
+      {{-- <li class="nav-item">
+        <a class="nav-link {{ Request::segment(1) == 'dioceses' ? '' : 'collapsed' }}" href="{{ route('dioceses.index') }}">
+          <i class="bi bi-peace-fill"></i>
+          <span>Dioceses</span>
+        </a>
+      </li> --}}
+      <!-- End Dioceses Nav -->
+
       <!-- End Departments Nav -->
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="users-profile.html">
           <i class="bi bi-columns"></i>
           <span>Departments</span>
         </a>
-      </li>
+      </li> --}}
       <!-- End Departments Nav -->
 
       <!-- End Positions Nav -->
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="users-profile.html">
           <i class="bi bi-award-fill"></i>
           <span>Positions</span>
         </a>
-      </li>
+      </li> --}}
       <!-- End Positions Nav -->
 
       <!-- End Ethnicities Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
+      {{-- <li class="nav-item">
+        <a class="nav-link {{ Request::segment(1) == 'ethinicities' ? '' : 'collapsed' }}" href="{{ route('ethinicities.index') }}">
           <i class="bi bi-circle-half"></i>
           <span>Ethnicities</span>
         </a>
-      </li>
+      </li> --}}
       <!-- End Ethnicities Nav -->
 
       <li class="nav-heading">Pages</li>

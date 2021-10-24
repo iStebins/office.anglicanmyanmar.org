@@ -9,9 +9,14 @@ class Diocese extends Model
 {
     use HasFactory;
 
-    public function user()
+    public function employees()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->hasMany('App\Models\Employee');
+    }
+
+    public function news()
+    {
+        return $this->hasMany('App\Models\News');
     }
 
 }

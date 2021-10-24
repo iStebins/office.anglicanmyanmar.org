@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
             MagazineSeeder::class,
             ParishSeeder::class,
             EmployeeSeeder::class,
+            PositionSeeder::class,
+            DepartmentSeeder::class,
         ]);
     }
 }

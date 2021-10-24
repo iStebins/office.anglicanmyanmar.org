@@ -14,7 +14,8 @@ class DioceseController extends Controller
      */
     public function index()
     {
-        //
+        $dioceses = Diocese::all(); 
+        return view('dioceses.index',compact('dioceses'));
     }
 
     /**

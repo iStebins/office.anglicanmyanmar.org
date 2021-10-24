@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DioceseController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\EthnicityController;
 use App\Http\Controllers\MagazineController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ParishController;
@@ -22,13 +25,16 @@ Route::get('/', function () {
     return redirect('dashboard');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::resource('/news', NewsController::class)->middleware('auth');
+Route::resource('/news', NewsController::class);
 
-Route::resource('/magazines', MagazineController::class)->middleware('auth');
+Route::resource('/magazines', MagazineController::class);
 
-Route::resource('/parishes', ParishController::class)->middleware('auth');
+Route::resource('/parishes', ParishController::class);
+Route::resource('/dioceses', DioceseController::class);
+Route::resource('/ethinicities', EthnicityController::class);
+Route::resource('/employees', EmployeeController::class);
 
 Auth::routes();
 

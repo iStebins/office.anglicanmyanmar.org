@@ -16,6 +16,7 @@ class CreateDiocesesTable extends Migration
         Schema::create('dioceses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

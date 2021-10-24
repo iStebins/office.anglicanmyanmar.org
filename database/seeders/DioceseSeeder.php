@@ -14,14 +14,14 @@ class DioceseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('dioceses')->insert(["name"=>"Provincial"]);
-        DB::table('dioceses')->insert(["name"=>"Yangon"]);
-        DB::table('dioceses')->insert(["name"=>"Hpa-An"]);
-        DB::table('dioceses')->insert(["name"=>"Mandalay"]);
-        DB::table('dioceses')->insert(["name"=>"Sittwe"]);
-        DB::table('dioceses')->insert(["name"=>"Myitkyina"]);
-        DB::table('dioceses')->insert(["name"=>"Taungoo"]);
-        DB::table('dioceses')->insert(["name"=>"Pathein"]);
-        DB::table('dioceses')->insert(["name"=>"Pyay"]);
+        DB::table('dioceses')->insert(["name"=>"Provincial", "image" => "https://anglicanmyanmar.org/images/logo/logocpm.png"]);
+        DB::table('dioceses')->insert(["name"=>"Yangon", "image" => "https://anglicanmyanmar.org/images/logo/logoygn.png"]);
+        DB::table('dioceses')->insert(["name"=>"Hpa-An", "image" => "https://anglicanmyanmar.org/images/logo/logohpaan.png"]);
+        DB::table('dioceses')->insert(["name"=>"Mandalay", "image" => "https://anglicanmyanmar.org/images/logo/logomdy.png"]);
+        DB::table('dioceses')->insert(["name"=>"Sittwe", "image" => "https://anglicanmyanmar.org/images/logo/logosittwe.png"]);
+        DB::table('dioceses')->insert(["name"=>"Myitkyina", "image" => "https://anglicanmyanmar.org/images/logo/logomyitkyina.png"]);
+        DB::table('dioceses')->insert(["name"=>"Taungoo", "image" => "https://anglicanmyanmar.org/images/logo/logotaungoo.png"]);
+        DB::table('dioceses')->insert(["name"=>"Pathein", "image" => "https://anglicanmyanmar.org/images/logo/logopathein.png"]);
+        DB::table('dioceses')->insert(["name"=>"Pyay", "image" => "https://anglicanmyanmar.org/images/logo/logopyay.png"]);
     }
 }
